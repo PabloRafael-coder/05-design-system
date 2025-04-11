@@ -1,5 +1,5 @@
+import type { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
-import { VariantProps } from '@stitches/react'
 
 export const Heading = styled('h2', {
   fontFamily: '$default',
@@ -25,4 +25,6 @@ export const Heading = styled('h2', {
   },
 })
 
-export interface HeadingProps extends VariantProps<typeof Heading> {}
+export interface HeadingProps extends ComponentProps<typeof Heading> {
+  as?: ElementType
+}
