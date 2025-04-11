@@ -6,6 +6,12 @@ export default {
   title: 'Form/Button',
   component: Button,
 
+  argTypes: {
+    onClick: {
+      action: 'click',
+    },
+  },
+
   args: {
     children: 'Send',
   },
