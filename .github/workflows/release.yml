@@ -26,7 +26,7 @@ jobs:
 
       - run: npm run build
         env: 
-          TURBO_TOKEN: DaydaJRMrvzBSwlqU1qMdw76
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN}}
           TURBO_TEAM: pablorafael-dev
 
       - name: Publish to NPM
