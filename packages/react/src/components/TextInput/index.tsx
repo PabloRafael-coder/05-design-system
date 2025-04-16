@@ -3,13 +3,14 @@ import { Input, Prefix, TextInputContainer } from './styles'
 
 export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   prefix?: string
+  ref: React.RefCallback<HTMLInputElement>
 }
 
-export function TextInput({ prefix, ...props }: TextInputProps) {
+export function TextInput({ ref, prefix, ...props }: TextInputProps) {
   return (
     <TextInputContainer>
       {!!prefix && <Prefix>{prefix}</Prefix>}
-      <Input {...props} />
+      <Input ref={ref} {...props} />
     </TextInputContainer>
   )
 }
